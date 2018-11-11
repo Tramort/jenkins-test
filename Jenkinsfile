@@ -10,5 +10,10 @@ pipeline {
         sh "./test.sh"
       }
     }
+    stage("stage2") {
+      steps {
+        echo "test"
+      }
+    }
   }
 }
