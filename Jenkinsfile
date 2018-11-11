@@ -5,7 +5,12 @@ pipeline {
   }  
   agent { dockerfile true }  
   stages {
-    stage("stage1") {
+    stage("build") {
+      steps {
+        echo "build"
+      }
+    }
+    stage("test") {
       steps {
         sh "./test.sh"
       }
