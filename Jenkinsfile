@@ -1,7 +1,7 @@
 pipeline {
   agent { dockerfile true }
   triggers {
-    cron(env.BRANCH_NAME == 'master' ? '*' : '')
+    cron(env.BRANCH_NAME == 'master' ? '* * * * *' : '')
   }
   stages {
     stage("stage1") {
