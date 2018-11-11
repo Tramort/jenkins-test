@@ -7,6 +7,7 @@ pipeline {
     stage("stage1") {
       steps {
         sh "./test.sh"
+        echo "conditional triger for multibranch test"
       }
     }
   }
